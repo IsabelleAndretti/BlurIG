@@ -6,7 +6,7 @@ class Cv2Service:
 
     def recover_face(self, frame):
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        faces = self.haarcascade.detectMultiScale(frame, scaleFactor=1.6, minNeighbors=4, minSize=(20, 20))
+        faces = self.haarcascade.detectMultiScale(frame, scaleFactor=1.099, minNeighbors=4, minSize=(20, 20))
         return faces
 
     def face_blur(self, frame, positions):
