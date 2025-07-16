@@ -1,12 +1,14 @@
 import cv2
 
+from backEnd.app.model.TypeAlgorithm import TypeAlgorithm
+
 
 class FaceService:
     def __init__(self, cv2_service, file_service):
         self.cv2_service = cv2_service
         self.file_service = file_service
 
-    def blur_video(self, video_bytes, algorithm="haarcascade"):
+    def blur_video(self, video_bytes, algorithm=TypeAlgorithm.HAARCASCADE):
         capture = cv2.VideoCapture(self.file_service.create_temp_file(suffix=".mp4", video_bytes=video_bytes))
         frame_blurred = []
         fps = int(capture.get(cv2.CAP_PROP_FPS))
@@ -37,10 +39,10 @@ class FaceService:
                 break
             frame = cv2.resize(frame, (640, 360))
             faces_positions = None
-            if algorithm == "haarcascade":
+            if algorithm == TypeAlgorithm.HAARCASCADE:
                 faces_positions = self.cv2_service.recover_face_cv2(frame)
 
-            elif algorithm == "dlib":
+            elif algorithm == TypeAlgorithm.DLIB:
                 faces_positions = self.cv2_service.recover_face_dlib(frame)
 
             faces_blur = self.cv2_service.face_blur_cv2(frame, faces_positions, algorithm=algorithm)

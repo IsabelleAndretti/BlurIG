@@ -1,6 +1,8 @@
 import cv2
 import dlib
 
+from backEnd.app.model.TypeAlgorithm import TypeAlgorithm
+
 
 class CvService:
     def __init__(self):
@@ -12,13 +14,13 @@ class CvService:
         faces = self.haarcascade.detectMultiScale(frame, scaleFactor=1.099, minNeighbors=4, minSize=(20, 20))
         return faces
 
-    def face_blur_cv2(self, frame, positions, algorithm="haarcascade"):
+    def face_blur_cv2(self, frame, positions, algorithm=TypeAlgorithm.HAARCASCADE):
         original_frame = frame
         for x, y, w, h in positions:
-            if algorithm == "haarcascade":
+            if algorithm == TypeAlgorithm.HAARCASCADE:
                 h = y + h
                 w = x + w
-            elif algorithm == "dlib":
+            elif algorithm == TypeAlgorithm.DLIB:
                 h = h
                 w = w
 
