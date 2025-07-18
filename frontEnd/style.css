@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header{
+    background-color: #703284;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.whiteSpace{
+    background-color: white ;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 30px;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.whiteSpace img{
+    width: max-content;
+}
+
+.name{
+    display: flex;
+    justify-items: center;
+    width: max-content;
+    align-items: center;
+    font-size: 32px;
+}
+
+article{
+    width: 100%;
+    height: max-content;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title p {
+    height: max-content;
+    width: max-content;
+}
+
+.containerExamples{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.examples{
+    display:flex;
+    justify-content: space-around;
+    width: 50%;
+    height: max-content;
+}
+
+.before{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.before img{
+    width: 250px;
+    height: max-content;  
+}
+
+.after{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.after img{
+    width: 250px;
+    height: max-content;    
+}
