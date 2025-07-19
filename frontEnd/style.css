@@ -66,6 +66,7 @@ article{
     justify-content: space-around;
     width: 50%;
     height: max-content;
+    gap: 100px;
 }
 
 .before{
@@ -88,4 +89,17 @@ article{
 .after img{
     width: 250px;
     height: max-content;    
+}
+
+.explainText{
+    font-size: 34px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+}
+
+.explainText p {
+    margin: 0px;
+    width: 100%;
 }
