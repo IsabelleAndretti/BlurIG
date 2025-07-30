@@ -103,3 +103,50 @@ article{
     margin: 0px;
     width: 100%;
 }
+
+.action {
+    width: 100%;
+    height: max-content;
+}
+
+.secondPage{
+    width: 100%;
+    height: max-content;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.helpText { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #f8f8f8, #ffffff);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.helpText p {
+    margin: 0;
+}
+
+.upload {
+    background: linear-gradient(to right, #703284, #a355b2);
+    color: white;
+    font-size: 28px;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(112, 50, 132, 0.3);
+}
+
+.upload:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #5a266a, #903d8a);
+}
